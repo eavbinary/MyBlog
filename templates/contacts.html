@@ -1,35 +1,18 @@
-<head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title>Правильная посадка огурцов</title>
-</head>
-<body>
-<nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand mb-0 h1" href="main.html">MyBlog</a>
+{% extends "base.html" %}
+
+{% block context %}
+    <h1>{{ user }}</h1>
+
+    <div class="list-group">
+        {% for post in posts %}
+            <a class="list-group-item list-group-item-action" href="/post/{{ post.id }}">{{ post.title }}</a>
+        {% endfor %}
     </div>
-
-</nav>
-
-<div class="container-fluid">
-    <h1>Светлана</h1>
-
-    <ul>
-        <li>
-            <a href="post.html">Правильная посадка огурцов</a>
-        </li>
-        <li>
-            <a href="post.html">Коллекция марок</a>
-        </li>
-    </ul>
 
 
     <div>
         <a class="btn btn-outline-primary" href="javascript:history.back()">Назад</a>
     </div>
-</div>
+    </div>
 
-
-</body>
-</html>
+{% endblock %}

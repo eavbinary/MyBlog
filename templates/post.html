@@ -1,39 +1,16 @@
-<head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <title>Правильная посадка огурцов</title>
-</head>
-<body>
-<nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand mb-0 h1" href="main.html">MyBlog</a>
-    </div>
+{% extends "base.html" %}
 
-</nav>
-<div class="container">
-    <h1>Правильная посадка огурцов</h1>
-    <a href="contacts.html">
+{% block context %}
+    <h1>{{ post.title }}</h1>
+    <a href="/contact/{{ post.user_id }}">
         <div class="badge bg-primary text-wrap" style="width: 6rem;">
-            Светлана
+            {{ post.user }}
         </div>
     </a>
     <div>
-        Прежде чем сажать огурцы нужно очень хорошо взрыхлить почву, она должна быть не истощенной, и хорошо удерживать
-        влагу. Когда будете выбирать место для посадки обратите свое внимание на то, которое будет хорошо освещаться
-        солнцем, оптимальна полутень – то есть золотая середина. Яркие лучи могут обжигать листья, а в тенистом месте
-        разовьется гниль. Так же огурцы отблагодарят хорошим урожаем за защищенное от ветра место обитания. Хорошо
-        посадить их «заслонив» грядкой кукурузы, подсолнечника, кустами смородины. Но нужно иметь ввиду что солнечная
-        сторона, то есть южная должна быть открыта.
-        Огурцам для их полноценного роста наиболее показана температура от 23 до 30 градусов, когда воздух охлаждается
-        ниже 15 градусов, процессы роста культуры останавливаются. Огурцы категорически не переносят заморозки, даже
-        приближение к нулевой отметки погубит молодые ростки. А климат с частыми и резкими колебаниями температур не
-        подходит для их роста. Поэтому часто приходится сажать огурцы в теплицы или укрывать в ненастье пленкой.
+        {{ post.description }}
     </div>
     <div>
         <a class="btn btn-outline-primary" href="javascript:history.back()">Назад</a>
     </div>
-</div>
-
-</body>
-</html>
+{% endblock %}

@@ -1,14 +1,14 @@
 import json
 
-from sqlalchemy.orm import Session, joinedload
+from sqlalchemy.orm import Session
 from base import Base, DB_NAME
 import os.path as path
 import os
 
-from user import User
-from section import Section
-from post import Post
-from tag import Tag
+from model.user import User
+from model.section import Section
+from model.post import Post
+from model.tag import Tag
 
 
 def init_db():

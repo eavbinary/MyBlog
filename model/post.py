@@ -4,8 +4,8 @@ from sqlalchemy import Column, String, Integer, ForeignKey, Text, DateTime, func
 from sqlalchemy.orm import relationship
 
 from base import Base
-from section import Section
-from user import User
+from model.section import Section
+from model.user import User
 
 
 class Post(Base):
